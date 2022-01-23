@@ -1,1 +1,2 @@
-Unity-newbie-code
+# 유니티 게임 엔진 기초
+2022-PRE학기제
