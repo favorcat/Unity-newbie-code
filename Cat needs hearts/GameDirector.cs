@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;   // UI를 쓸 때는 꼭 사용해야 함
+using UnityEngine.SceneManagement;
 
 public class GameDirector : MonoBehaviour {
     GameObject player;      // 플레이어 오브젝트를 대입할 변수 데이터형 GameObject
@@ -19,10 +20,10 @@ public class GameDirector : MonoBehaviour {
     void Update(){
         float lengthDis = this.goal.transform.position.x - this.player.transform.position.x;
         if (lengthDis >= 0) {
-            this.distance.GetComponent<Text>().text = "목표지점" + " : " + lengthDis.ToString("F3") + "m";
+            this.distance.GetComponent<Text>().text = "GOAL" + " : " + lengthDis.ToString("F3") + "m";
             // ToString("D숫자") 정수형, ToString("F숫자") 실수형
         } else {
-            this.distance.GetComponent<Text>().text = "GAME OVER !!";
+            SceneManager.LoadScene("GameOver"); // GameOver으로 변경
         }
     }
 }
