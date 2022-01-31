@@ -8,11 +8,6 @@ public class Player : MonoBehaviour {
     float y_Speed = 0; // y축 방향 속도변수
     bool leftFlag = false; // 캐릭터 뒤집기 플래그
 
-    // Start is called before the first frame update
-    void Start() {
-        
-    }
-
     // Update is called once per frame
     void Update() {
         x_Speed = 0; // x축 방향 속도
